@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlibs</title>
+</head>
+<body>
+    <h1>MADLIB PROMPTS</h1>
+    <ol>
+    <form action="/story">
+        {% for p in my_story.prompts %}     
+        <li>       
+            <input type="text" placeholder="{{p}}" name="{{p}}">
+        </li>        
+        {% endfor %}
+        <button>Submit!</button>
+    </form>  
+    </ol>  
+    {{my_story.template}}
+</body>
+</html>
